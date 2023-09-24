@@ -1,0 +1,14 @@
+.button {
+    cursor: pointer;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+}
+
+.button:hover {
+    border-color: red;
+}
+
+.carousel {
+    padding-top: 48px;
+}
