@@ -1,10 +1,16 @@
 import Head from "next/head";
 import { Inter } from "next/font/google";
-import styles from "@/styles/Home.module.css";
+import useGetCourse from "@/react-query/hooks/useGetCourse";
+
+import styles from "./index.module.css";
+
+import StudentCard from "@/components/student-card";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  const { data: course } = useGetCourse();
+
   return (
     <>
       <Head>
@@ -13,7 +19,16 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={inter.className}></main>
+      <main className={`${inter.className} ${styles.main}`}>
+        <section className={styles.section}>
+          <h1 className={styles.courseName}>{course?.name}</h1>
+          <span className={styles.courseDateRange}>
+            {course?.startDate} - {course?.endDate}
+          </span>
+          <span className={styles.courseCampus}>{course?.campus}</span>
+          {!!course && <StudentCard {...course?.students?.[0]} />}
+        </section>
+      </main>
     </>
   );
 }

@@ -1,0 +1,27 @@
+.main {
+    padding-top: 48px;
+    max-width: 1024px;
+    margin: 0px auto;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.courseName {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.courseDateRange {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.courseCampus {
+    font-size: 1rem;
+    font-weight: 400;
+}
