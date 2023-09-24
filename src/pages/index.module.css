@@ -1,6 +1,6 @@
 .main {
     padding: 48px 12px;
-    max-width: 600px;
+    max-width: var(--max-width);
     margin: 0px auto;
 }
 
@@ -12,8 +12,17 @@
 }
 
 .courseName {
-    font-size: 2rem;
+    text-align: center;
+    font-size: 1.4rem;
     font-weight: 600;
+
+    @media screen and (min-width: 768px) {
+        font-size: 1.5rem;
+    }
+
+    @media screen and (min-width: 1024px) {
+        font-size: 2rem
+    }
 }
 
 .courseDateRange {

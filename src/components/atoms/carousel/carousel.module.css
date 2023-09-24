@@ -3,10 +3,12 @@
     margin: 0 auto;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 8px;
 }
 
 .carouselContainer {
+    flex-shrink: 1;
     padding: 8px 12px;
     display: grid;
     gap: 1rem;
