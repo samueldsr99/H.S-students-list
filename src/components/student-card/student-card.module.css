@@ -1,0 +1,51 @@
+.root {
+    width: fit-content;
+    background-color: lightgray;
+    color: black;
+    border-radius: 12px;
+
+    padding-top: 1rem;
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+    padding-bottom: 1.4rem;
+}
+
+.flexContainer {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.studentFullName {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+.photo {
+    object-fit: cover;
+    border-radius: 50%;
+    border: solid 1px #685cc5;
+    place-self: center;
+}
+
+.studentDetailsContainer {
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.studentDetailsRow {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.studentDetailsRowTitle {
+    font-weight: 700;
+}
+
+.studentDetailsRowDescription {
+    font-weight: 400;
+}
