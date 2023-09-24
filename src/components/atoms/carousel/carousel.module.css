@@ -1,0 +1,57 @@
+.carousel {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.carouselContainer {
+    padding: 8px 12px;
+    display: grid;
+    gap: 1rem;
+    grid-auto-flow: column;
+    grid-auto-columns: 25%;
+    transition: transform 0.3 ease;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+
+    scroll-snap-type: inline mandatory;
+    scroll-padding-inline: 1rem;
+
+    mask-image: linear-gradient(transparent, black 10%, black 90%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right,transparent, black 10%, black 90%, transparent 100%);
+}
+
+.carouselItem {
+    scroll-snap-align: start;
+}
+
+.arrowIcon {
+    height: 16px;
+    width: 16px;
+}
+
+.swipeButton {
+    flex-shrink: 0;
+    height: 48px;
+    width: 48px;
+    border-radius: 50%;
+    color: lightgray;
+    background-color: #3E4042;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    transition: all 200ms ease;
+}
+
+.swipeButton:hover {
+    background-color: #6b6d6f;
+}
+
+.swipeButton:active {
+    transform: scale(0.95);
+}
