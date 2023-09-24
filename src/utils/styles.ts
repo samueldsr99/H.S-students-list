@@ -6,5 +6,4 @@ type Falsy = false | null | undefined;
  * @param classes List of classNames
  * @returns
  */
-export const cn = (classes: (string | Falsy)[]): string =>
-  classes.filter(Boolean).join(" ");
+export const cn = (classes: (string | Falsy)[]): string => classes.filter(Boolean).join(" ");

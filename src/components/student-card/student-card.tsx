@@ -1,20 +1,14 @@
-import { StudentModel } from "@/lib/models/student";
 import { format } from "date-fns";
+
+import { StudentModel } from "@/lib/models/student";
 
 export type StudentCardProps = StudentModel;
 
-import styles from "./student-card.module.css";
 import Image from "next/image";
 
-const StudentCard = ({
-  photo,
-  firstName,
-  lastName,
-  programName,
-  degree,
-  campus,
-  startDate,
-}: StudentCardProps) => {
+import styles from "./student-card.module.css";
+
+const StudentCard = ({ photo, firstName, lastName, programName, degree, campus, startDate }: StudentCardProps) => {
   const rows = [
     {
       id: 1,
@@ -41,15 +35,9 @@ const StudentCard = ({
   return (
     <article className={styles.root}>
       <div className={styles.flexContainer}>
-        {!!photo ? (
+        {photo ? (
           // https Prefix is missing in photo.file
-          <Image
-            className={styles.photo}
-            src={`https:${photo.file}`}
-            alt={photo.title}
-            width={128}
-            height={128}
-          />
+          <Image className={styles.photo} src={`https:${photo.file}`} alt={photo.title} width={128} height={128} />
         ) : (
           <div />
         )}
@@ -60,12 +48,8 @@ const StudentCard = ({
           <div className={styles.studentDetailsContainer}>
             {rows.map((row) => (
               <div key={row.id} className={styles.studentDetailsRow}>
-                <span className={styles.studentDetailsRowTitle}>
-                  {row.name}
-                </span>
-                <span className={styles.studentDetailsRowDescription}>
-                  {row.value}
-                </span>
+                <span className={styles.studentDetailsRowTitle}>{row.name}</span>
+                <span className={styles.studentDetailsRowDescription}>{row.value}</span>
               </div>
             ))}
           </div>

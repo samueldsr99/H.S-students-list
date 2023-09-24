@@ -1,5 +1,6 @@
 import httpService from "../config/axios.config";
 import { CourseModel } from "../models/course";
+
 import { ServiceFunction } from "./types";
 
 export type GetCourseRequest = void;
