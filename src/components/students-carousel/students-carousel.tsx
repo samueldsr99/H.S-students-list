@@ -29,6 +29,12 @@ const StudentsCarousel = ({ students }: StudentsCarouselProps) => {
                 height={96}
                 active={student.id === currentStudent.id}
               />
+              <div className={styles.itemFooter}>
+                <p>
+                  {student.firstName} {student.lastName}
+                </p>
+                <span className={styles.studentProgramName}>{student.programName}</span>
+              </div>
             </button>
           </CarouselItem>
         ))}

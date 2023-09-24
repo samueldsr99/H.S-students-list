@@ -3,6 +3,7 @@
     border-radius: 50%;
     border: none;
     outline: none;
+    background: transparent;
 }
 
 .button:hover {
@@ -11,4 +12,17 @@
 
 .carousel {
     padding-top: 48px;
+}
+
+.itemFooter {
+    text-align: center;
+}
+
+.studentFullName {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.studentProgramName {
+    font-size: 12px;
 }
