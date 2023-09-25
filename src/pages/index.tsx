@@ -1,4 +1,4 @@
-import { GetStaticProps, NextPage } from "next";
+import { GetServerSideProps, NextPage } from "next";
 import { Inter } from "next/font/google";
 import Head from "next/head";
 
@@ -41,7 +41,7 @@ const Home: NextPage<PageProps> = ({ course }) => {
 
 export default Home;
 
-export const getStaticProps: GetStaticProps<PageProps> = async () => {
+export const getServerSideProps: GetServerSideProps<PageProps> = async () => {
   const course = await studentListService.courses.get();
 
   return {
